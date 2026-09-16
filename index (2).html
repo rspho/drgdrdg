@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RMSP Motors — Véhicules d'exception</title>
+<meta name="description" content="RMSP Motors sélectionne, prépare et livre des véhicules de sport et de prestige d'exception : Porsche, Ferrari, BMW et plus. Stock contrôlé, conciergerie 7j/7.">
+
+<link rel="icon" type="image/png" href="801394852_2400624680683157_8062290233063013296_n.png">
+
+<!-- Open Graph -->
+<meta property="og:title" content="RMSP Motors — Véhicules d'exception">
+<meta property="og:description" content="Sélection resserrée de voitures de sport et de prestige, contrôlées et prêtes à prendre la route. Suivi personnalisé et conciergerie 7j/7.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=1200&q=80">
+<meta property="og:url" content="https://www.rmsp-motors.fr/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="RMSP Motors">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RMSP Motors — Véhicules d'exception">
+<meta name="twitter:description" content="Sélection resserrée de voitures de sport et de prestige, contrôlées et prêtes à prendre la route.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=1200&q=80">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy-deep: #0B131B;
+    --navy-mid: #14212D;
+    --yacht: #213B50;
+    --yacht-light: #487A9E;
+    --yacht-pale: #DDE7F0;
+    --steel: #63717E;
+    --steel-light: #A3B0BC;
+    --gray-alt: #F5F7F9;
+    --line: #E1E6EB;
+    --white: #FFFFFF;
+    --ink: #0C1218;
+    --ok: #1F7A52;
+    --hold: #B07417;
+    --sold: #7C8896;
+    --gold: #C29B63;
+    --gold-light: #E8D3B0;
+    --gold-line: rgba(194, 155, 99, 0.4);
+    --radius: 8px;
+    --radius-sm: 4px;
+    --shadow-sm: 0 1px 3px rgba(11,19,27,0.06);
+    --shadow-md: 0 12px 28px -10px rgba(11,19,27,0.18);
+    --shadow-lg: 0 30px 60px -18px rgba(11,19,27,0.35);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    color: var(--ink);
+    background: var(--white);
+    -webkit-font-smoothing: antialiased;
+    font-size: 15.5px;
+    line-height: 1.5;
+  }
+  h1, h2, h3, .display {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  button { font-family: inherit; cursor: pointer; }
+  ::selection { background: var(--gold); color: #fff; }
+
+  /* ---------- NAV ---------- */
+  header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(11, 19, 27, 0.96);
+    backdrop-filter: blur(14px) saturate(160%);
+    border-bottom: 1px solid rgba(194, 155, 99, 0.2);
+  }
+  .nav-wrap {
+    max-width: 1280px; margin: 0 auto; padding: 14px 32px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+  .logo-img {
+    height: 52px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1) drop-shadow(0 0 2px rgba(255,255,255,0.2));
+    transition: transform .2s ease;
+  }
+  .logo:hover .logo-img { transform: scale(1.03); }
+  .logo-text {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  nav.links { display: flex; gap: 36px; align-items: center; }
+  nav.links a {
+    position: relative; color: rgba(255,255,255,0.85); font-size: 14.5px; font-weight: 600; padding-bottom: 4px;
+    transition: color .2s;
+  }
+  nav.links a::after {
+    content: ""; position: absolute; left: 0; right: 100%; bottom: 0; height: 2px; background: var(--gold);
+    transition: right .25s cubic-bezier(.4,0,.2,1);
+  }
+  nav.links a:hover { color: var(--white); }
+  nav.links a:hover::after { right: 0; }
+
+  .nav-actions { display: flex; align-items: center; gap: 14px; }
+  .burger { display: none; background: none; border: none; color: var(--white); font-size: 28px; }
+
+  /* Mobile Nav Drawer */
+  .mobile-nav {
+    display: none; position: fixed; inset: 0; background: var(--navy-deep); z-index: 99;
+    flex-direction: column; padding: 120px 32px 32px; gap: 24px; text-align: center;
+  }
+  .mobile-nav.open { display: flex; }
+  .mobile-nav a { color: #fff; font-size: 20px; font-weight: 600; }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative; overflow: hidden; isolation: isolate;
+    background: radial-gradient(90% 120% at 82% -10%, rgba(72,122,158,0.35) 0%, rgba(11,19,27,0) 55%),
+                linear-gradient(160deg, var(--navy-mid) 0%, var(--navy-deep) 65%, #050A0E 100%);
+    color: var(--white); padding: 110px 32px 90px;
+    text-align: center;
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0; z-index: 0;
+    background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=70') center 35%/cover;
+    opacity: 0.28; mix-blend-mode: luminosity; filter: grayscale(0.2) contrast(1.15);
+  }
+  .hero::after {
+    content: ""; position: absolute; inset: 0; z-index: 1;
+    background: radial-gradient(130% 120% at 50% 0%, transparent 25%, rgba(5,10,14,0.92) 100%);
+  }
+  .hero-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-chip {
+    display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.08);
+    border: 1px solid var(--gold-line); padding: 7px 14px 7px 9px; border-radius: 30px;
+    font-size: 12.5px; font-weight: 600; color: var(--gold-light); margin-bottom: 26px;
+  }
+  .hero-chip .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 3px rgba(194, 155, 99, 0.3); }
+  
+  .hero-title-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 0.9;
+    margin-bottom: 10px;
+  }
+  .hero-title-brand .rmsp {
+    font-size: clamp(64px, 11vw, 120px);
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    text-transform: uppercase;
+  }
+  .hero-title-brand .motors {
+    font-size: clamp(20px, 3.5vw, 36px);
+    font-weight: 500;
+    letter-spacing: 0.35em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-top: 5px;
+  }
+
+  .hero-rule { width: 64px; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 22px auto 0; }
+  .hero p.lead { font-size: 17.5px; line-height: 1.68; color: rgba(255,255,255,0.75); max-width: 48ch; margin: 22px auto 0; }
+
+  /* ---------- SECTIONS ---------- */
+  section { padding: 96px 32px; }
+  .section-inner { max-width: 1280px; margin: 0 auto; }
+  .kicker { display: flex; align-items: center; gap: 9px; font-size: 13px; font-weight: 700; color: var(--yacht); margin-bottom: 16px; }
+  .kicker .bar { width: 24px; height: 2px; background: var(--gold); border-radius: 2px; }
+  .section-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; margin-bottom: 48px; flex-wrap: wrap; }
+  .section-head h2 { font-size: clamp(30px, 3.2vw, 40px); }
+  .section-head p { color: var(--steel); font-size: 15px; max-width: 42ch; line-height: 1.65; margin: 0; }
+  .alt-bg { background: var(--gray-alt); }
+
+  /* Stock & Filtres */
+  .stock-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+  .filters { display: flex; gap: 8px; flex-wrap: wrap; }
+  .filter-btn {
+    padding: 8px 18px; font-size: 13.5px; font-weight: 600; border: 1px solid var(--line);
+    background: var(--white); border-radius: 30px; color: var(--steel); transition: all .18s;
+  }
+  .filter-btn.active, .filter-btn:hover { background: var(--navy-deep); color: var(--white); border-color: var(--navy-deep); }
+  .search-input {
+    padding: 9px 16px; border: 1px solid var(--line); border-radius: 30px; font-size: 13.5px;
+    width: 240px; background: var(--white); outline: none; transition: border-color .2s; color: var(--ink);
+  }
+  .search-input:focus { border-color: var(--gold); }
+
+  .adv-filters { display: flex; gap: 24px; flex-wrap: wrap; align-items: flex-end; background: var(--white); border: 1px solid var(--line); padding: 20px 24px; border-radius: var(--radius); margin-bottom: 32px; }
+  .adv-filter-group { display: flex; flex-direction: column; gap: 7px; }
+  .adv-filter-group label { font-weight: 700; color: var(--steel); font-size: 11px; letter-spacing: 0.04em; }
+  .adv-filter-group select {
+    padding: 9px 12px; border: 1px solid var(--line); border-radius: 6px; font-size: 13px;
+    background: var(--white); min-width: 160px; color: var(--ink); outline: none;
+  }
+  .adv-filter-group select:focus { border-color: var(--gold); }
+  .price-range-group { min-width: 240px; }
+  .dual-range { position: relative; height: 30px; width: 220px; }
+  .dual-range input[type=range] {
+    position: absolute; width: 100%; top: 11px; margin: 0; -webkit-appearance: none; appearance: none;
+    background: transparent; pointer-events: none; height: 4px;
+  }
+  .dual-range input[type=range]::-webkit-slider-runnable-track { background: transparent; }
+  .dual-range input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none; pointer-events: auto; width: 16px; height: 16px; border-radius: 50%;
+    background: var(--gold); border: 2px solid #fff; box-shadow: 0 1px 5px rgba(0,0,0,0.35); cursor: pointer; margin-top: -6px;
+  }
+  .dual-range input[type=range]::-moz-range-thumb {
+    pointer-events: auto; width: 16px; height: 16px; border-radius: 50%; background: var(--gold); border: 2px solid #fff; cursor: pointer;
+  }
+  .range-track { position: absolute; top: 13px; left: 0; right: 0; height: 4px; background: var(--line); border-radius: 2px; }
+  .range-fill { position: absolute; height: 4px; background: var(--gold); border-radius: 2px; }
+  .filter-reset-btn {
+    padding: 10px 20px; font-size: 12.5px; font-weight: 700; border: 1px solid var(--line);
+    background: var(--gray-alt); border-radius: 30px; color: var(--steel); transition: all .18s;
+  }
+  .filter-reset-btn:hover { background: var(--navy-deep); color: #fff; border-color: var(--navy-deep); }
+
+  .grid-cars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+  .car-card {
+    border: 1px solid var(--line); background: var(--white); display: flex; flex-direction: column;
+    border-radius: var(--radius); overflow: hidden; transition: box-shadow .22s, transform .22s; cursor: pointer;
+  }
+  .car-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-5px); }
+  .car-media { aspect-ratio: 4/3; background: #E4E9ED; position: relative; overflow: hidden; }
+  .car-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+  .car-card:hover .car-media img { transform: scale(1.05); }
+  .car-badge {
+    position: absolute; top: 14px; left: 14px; color: #fff;
+    font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px; text-transform: uppercase;
+  }
+  .badge-Disponible { background: var(--ok); }
+  .badge-Réservé { background: var(--hold); }
+  .badge-Vendu { background: var(--sold); }
+  .car-body { padding: 22px; flex: 1; display: flex; flex-direction: column; }
+  .car-body h3 { font-size: 19px; font-weight: 600; margin-bottom: 4px; }
+  .car-sub { color: var(--steel); font-size: 13.5px; margin-bottom: 16px; }
+  .car-specs { display: flex; gap: 8px; font-size: 12px; color: var(--steel); margin-bottom: 18px; flex-wrap: wrap; }
+  .car-specs span { padding: 4px 10px; background: var(--gray-alt); border-radius: 4px; font-weight: 500; }
+  .car-price { margin-top: auto; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--line); padding-top: 16px; position: relative; }
+  .car-price::before { content: ""; position: absolute; top: -1px; left: 0; width: 36px; height: 1px; background: var(--gold); }
+  .car-price b { font-family: 'Fraunces', serif; font-size: 22px; color: var(--navy-deep); font-weight: 600; }
+  .car-cta { font-size: 13px; font-weight: 700; color: var(--yacht-light); display: inline-flex; align-items: center; gap: 5px; }
+
+  /* Why Choose Us */
+  .why-grid { display: grid; grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+  .why-card { background: var(--white); padding: 36px 28px; border: 1px solid var(--line); border-radius: var(--radius); border-top: 2px solid var(--gold); text-align: center; }
+  .why-card .icon-wrap { width: 46px; height: 46px; border-radius: 50%; background: var(--yacht-pale); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+  .why-card .icon-wrap svg { width: 22px; height: 22px; color: var(--yacht); }
+  .why-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 10px; }
+  .why-card p { color: var(--steel); font-size: 14px; line-height: 1.6; margin: 0; }
+
+  /* Social Strip */
+  .social-strip { background: var(--navy-deep); color: var(--white); padding: 64px 32px; border-top: 1px solid var(--gold-line); }
+  .social-strip .section-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 28px; }
+  .social-links { display: flex; gap: 12px; flex-wrap: wrap; }
+  .social-links a {
+    display: flex; align-items: center; gap: 10px; padding: 10px 20px; border: 1px solid rgba(194, 155, 99, 0.3);
+    border-radius: 30px; font-size: 13.5px; font-weight: 600; transition: all .2s;
+  }
+  .social-links a:hover { background: rgba(194, 155, 99, 0.12); border-color: var(--gold); transform: translateY(-2px); }
+
+  /* Contact Section */
+  .contact-card { background: var(--navy-deep); border-radius: 14px; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; box-shadow: var(--shadow-lg); border: 1px solid var(--gold-line); }
+  .contact-info { padding: 52px; color: var(--white); }
+  .contact-info h2 { color: #fff; margin-bottom: 16px; font-size: 28px; }
+  .contact-info p { color: rgba(255,255,255,0.7); font-size: 14.5px; margin-bottom: 30px; line-height: 1.6; }
+  .info-line { display: flex; gap: 12px; align-items: center; margin-bottom: 16px; font-size: 14.5px; }
+  .info-line svg { width: 18px; height: 18px; color: var(--gold-light); }
+  .contact-form-wrap { background: var(--white); padding: 52px; }
+  .f-row { margin-bottom: 16px; }
+  .f-row label { display: block; font-size: 12.5px; font-weight: 700; color: var(--steel); margin-bottom: 6px; }
+  .f-row input, .f-row textarea, .f-row select {
+    width: 100%; border: 1px solid var(--line); padding: 12px 14px; font-family: inherit; font-size: 14px;
+    border-radius: var(--radius-sm); background: var(--gray-alt); transition: all .2s; color: var(--ink);
+  }
+  .f-row input:focus, .f-row textarea:focus, .f-row select:focus { outline: none; border-color: var(--gold); background: #fff; box-shadow: 0 0 0 3px rgba(194,155,99,0.15); }
+  .submit-btn {
+    width: 100%; background: var(--navy-deep); color: #fff; padding: 14px; font-weight: 700; font-size: 14.5px;
+    border: none; border-radius: var(--radius-sm); transition: background .18s;
+  }
+  .submit-btn:hover { background: var(--yacht); }
+
+  /* Footer */
+  footer { background: var(--navy-deep); color: rgba(255,255,255,0.55); padding: 32px; font-size: 13px; border-top: 1px solid rgba(194,155,99,0.15); }
+  .footer-inner { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+
+  /* ---------- MODALS & VIEWS ---------- */
+  .modal-bg {
+    display: none; position: fixed; inset: 0; background: rgba(11,19,27,0.78); z-index: 200;
+    align-items: center; justify-content: center; padding: 20px; overflow-y: auto; backdrop-filter: blur(4px);
+  }
+  .modal-bg.open { display: flex; }
+  .modal { background: #fff; max-width: 680px; width: 100%; padding: 32px; border-radius: 12px; box-shadow: var(--shadow-lg); max-height: 90vh; overflow-y: auto; position: relative; }
+  .modal-close { position: absolute; top: 20px; right: 20px; background: none; border: none; font-size: 24px; color: var(--steel); }
+
+  /* Details Car Modal */
+  .car-detail-gallery { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+  .main-img-wrap { aspect-ratio: 16/9; background: #eee; border-radius: var(--radius); overflow: hidden; position: relative; cursor: zoom-in; touch-action: pan-y; }
+  .main-img-wrap img { width: 100%; height: 100%; object-fit: cover; user-select: none; }
+  .main-img-wrap .zoom-hint {
+    position: absolute; bottom: 10px; right: 10px; background: rgba(11,19,27,0.65); color: #fff;
+    font-size: 11px; font-weight: 600; padding: 5px 11px; border-radius: 20px; pointer-events: none;
+  }
+  .thumb-gallery { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
+  .thumb-gallery img { width: 70px; height: 50px; object-fit: cover; border-radius: 4px; cursor: pointer; opacity: 0.6; transition: opacity .2s; flex-shrink: 0; }
+  .thumb-gallery img.active { opacity: 1; border: 2px solid var(--gold); }
+  .detail-specs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; background: var(--gray-alt); padding: 16px; border-radius: var(--radius); margin: 20px 0; font-size: 13.5px; }
+
+  /* Lightbox */
+  .lightbox { display: none; position: fixed; inset: 0; background: rgba(5,9,13,0.97); z-index: 400; align-items: center; justify-content: center; touch-action: pan-y; }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: 90vw; max-height: 82vh; object-fit: contain; border-radius: 4px; user-select: none; -webkit-user-drag: none; }
+  .lightbox-close { position: absolute; top: 22px; right: 26px; background: none; border: none; color: #fff; font-size: 32px; cursor: pointer; line-height: 1; }
+  .lightbox-nav {
+    position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.25); color: #fff; width: 48px; height: 48px; border-radius: 50%;
+    font-size: 24px; display: flex; align-items: center; justify-content: center; transition: all .2s;
+  }
+  .lightbox-nav:hover { background: rgba(194, 155, 99, 0.35); border-color: var(--gold); }
+  .lightbox-prev { left: 20px; } .lightbox-next { right: 20px; }
+  .lightbox-counter { position: absolute; bottom: 22px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,0.7); font-size: 12.5px; letter-spacing: 0.04em; font-weight: 600; }
+  @media(max-width: 600px) { .lightbox-nav { width: 40px; height: 40px; font-size: 19px; } .lightbox-prev { left: 8px; } .lightbox-next { right: 8px; } }
+
+  /* ESPACE ADMIN */
+  #adminView { display: none; background: var(--gray-alt); min-height: 100vh; }
+  .admin-bar { background: var(--navy-deep); color: var(--white); padding: 18px 32px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--gold-line); }
+  .admin-wrap { max-width: 1180px; margin: 0 auto; padding: 40px 20px; }
+  .admin-kpi { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-bottom: 30px; }
+  .kpi-card { background: var(--white); padding: 20px; border-radius: var(--radius); box-shadow: var(--shadow-sm); border: 1px solid var(--line); border-top: 2px solid var(--gold); }
+  .kpi-card div { font-size: 12.5px; color: var(--steel); font-weight: 700; text-transform: uppercase; }
+  .kpi-card b { font-size: 24px; font-family: 'Fraunces', serif; color: var(--navy-deep); margin-top: 4px; display: block; }
+
+  .admin-table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
+  .admin-table th, .admin-table td { padding: 14px 16px; border-bottom: 1px solid var(--line); text-align: left; font-size: 13.5px; }
+  .admin-table th { background: #F5F7F8; font-weight: 700; color: var(--steel); font-size: 11.5px; text-transform: uppercase; }
+  .admin-table tr:last-child td { border-bottom: none; }
+  .row-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+  .row-actions button { font-size: 11.5px; font-weight: 700; padding: 6px 10px; border-radius: var(--radius-sm); border: 1px solid var(--line); background: #fff; white-space: nowrap; }
+  .row-actions button.danger { color: #B03A2E; border-color: #F0D2CD; }
+  .row-actions button.status-hold { color: var(--hold); border-color: #EFDBB8; }
+  .row-actions button.status-sold { color: var(--sold); border-color: #DCE1E5; }
+  .row-actions button.status-avail { color: var(--ok); border-color: #C9E5D8; }
+  .admin-section-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 12px; }
+  .admin-export-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+  .btn-outline-small {
+    padding: 9px 16px; font-size: 12.5px; font-weight: 700; border-radius: var(--radius-sm);
+    border: 1px solid var(--line); background: #fff; color: var(--navy-deep); transition: all .18s;
+  }
+  .btn-outline-small:hover { border-color: var(--gold); background: var(--yacht-pale); }
+
+  /* Dropzone photos */
+  .dropzone { border: 2px dashed var(--line); border-radius: var(--radius); padding: 24px; text-align: center; cursor: pointer; background: var(--gray-alt); }
+  .dropzone:hover { border-color: var(--gold); background: var(--yacht-pale); }
+  .photo-thumbs { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+  .photo-thumb { position: relative; width: 75px; height: 75px; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--line); }
+  .photo-thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .photo-thumb .thumb-remove { position: absolute; top: 2px; right: 2px; width: 18px; height: 18px; border-radius: 50%; background: rgba(0,0,0,0.7); color: #fff; border: none; font-size: 10px; cursor: pointer; }
+
+  /* Toast & Login */
+  .login-box { max-width: 380px; margin: 100px auto; background: #fff; padding: 40px; border-radius: 12px; box-shadow: var(--shadow-md); text-align: center; border: 1px solid var(--line); }
+  .toast { position: fixed; bottom: 26px; right: 26px; background: var(--navy-deep); color: #fff; padding: 14px 22px; font-size: 13.5px; font-weight: 600; border-radius: var(--radius-sm); z-index: 300; display: none; box-shadow: var(--shadow-md); }
+
+  @media(max-width: 900px) {
+    nav.links { display: none; }
+    .burger { display: block; }
+    .hero { padding: 80px 20px 60px; }
+    .grid-cars, .why-grid, .admin-kpi { grid-template-columns: 1fr; }
+    .contact-card { grid-template-columns: 1fr; }
+    .contact-info, .contact-form-wrap { padding: 32px 24px; }
+    .logo-img { height: 42px; }
+    .logo-text { font-size: 18px; }
+    .adv-filters { flex-direction: column; align-items: stretch; }
+    .adv-filter-group select { min-width: 100%; }
+    .dual-range { width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= SITE PUBLIC ================= -->
+<div id="siteView">
+
+  <header>
+    <div class="nav-wrap">
+      <a href="#top" class="logo">
+        <img src="801394852_2400624680683157_8062290233063013296_n.png" alt="RMSP Motors Logo" class="logo-img">
+        <span class="logo-text">RMSP Motors</span>
+      </a>
+      <nav class="links">
+        <a href="#annonces" onclick="filterCarsNav('Disponible')">A vendre</a>
+        <a href="#annonces" onclick="filterCarsNav('Vendu')">Vendue</a>
+        <a href="#pourquoi">Pourquoi nous</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="burger" onclick="toggleMobileNav()">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#annonces" onclick="toggleMobileNav(); filterCarsNav('Disponible');">A vendre</a>
+    <a href="#annonces" onclick="toggleMobileNav(); filterCarsNav('Vendu');">Vendue</a>
+    <a href="#pourquoi" onclick="toggleMobileNav()">Pourquoi nous</a>
+    <a href="#contact" onclick="toggleMobileNav()">Contact</a>
+  </div>
+
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <div class="hero-chip"><span class="dot"></span>Sélection resserrée, suivi personnalisé</div>
+      <div class="hero-title-brand">
+        <span class="rmsp">RMSP</span>
+        <span class="motors">Motors</span>
+      </div>
+      <div class="hero-rule"></div>
+      <p class="lead">RMSP Motors sélectionne, prépare et livre des véhicules de sport et de prestige avec la même exigence que celle qu'on attend d'une pièce de collection.</p>
+    </div>
+  </section>
+
+  <section class="alt-bg" id="annonces">
+    <div class="section-inner">
+      <div class="section-head">
+        <div>
+          <div class="kicker"><span class="bar"></span>Le Stock</div>
+          <h2>Nos annonces en ce moment</h2>
+        </div>
+        <p>Filtrer selon la disponibilité, le budget, la marque ou recherchez directement le modèle souhaité.</p>
+      </div>
+      <div class="stock-toolbar">
+        <div class="filters" id="filters">
+          <button class="filter-btn active" id="btn-Tous" onclick="filterCars('Tous', this)">Tous</button>
+          <button class="filter-btn" id="btn-Disponible" onclick="filterCars('Disponible', this)">Disponibles</button>
+          <button class="filter-btn" id="btn-Réservé" onclick="filterCars('Réservé', this)">Réservés</button>
+          <button class="filter-btn" id="btn-Vendu" onclick="filterCars('Vendu', this)">Vendus</button>
+        </div>
+        <input type="text" class="search-input" id="searchInput" placeholder="Rechercher marque, modèle..." oninput="renderGrid()">
+      </div>
+
+      <div class="adv-filters">
+        <div class="adv-filter-group">
+          <label>Marque</label>
+          <select id="filterBrand" onchange="renderGrid()"><option value="">Toutes les marques</option></select>
+        </div>
+        <div class="adv-filter-group">
+          <label>Année</label>
+          <select id="filterYear" onchange="renderGrid()"><option value="">Toutes les années</option></select>
+        </div>
+        <div class="adv-filter-group">
+          <label>Boîte de vitesses</label>
+          <select id="filterGearbox" onchange="renderGrid()">
+            <option value="">Toutes les boîtes</option>
+            <option value="Automatique">Automatique</option>
+            <option value="Manuelle">Manuelle</option>
+          </select>
+        </div>
+        <div class="adv-filter-group price-range-group">
+          <label>Budget : <span id="priceRangeLabel"></span></label>
+          <div class="dual-range">
+            <input type="range" id="priceMin" oninput="onPriceRangeInput('min')">
+            <input type="range" id="priceMax" oninput="onPriceRangeInput('max')">
+            <div class="range-track"><div class="range-fill" id="rangeFill"></div></div>
+          </div>
+        </div>
+        <button class="filter-reset-btn" onclick="resetFilters()">Réinitialiser les filtres</button>
+      </div>
+
+      <div class="grid-cars" id="carGrid"></div>
+    </div>
+  </section>
+
+  <section id="pourquoi">
+    <div class="section-inner">
+      <div class="section-head">
+        <div>
+          <div class="kicker"><span class="bar"></span>Notre approche</div>
+          <h2>Pourquoi passer par RMSP Motors</h2>
+        </div>
+        <p>Une expertise passionnée et un service de conciergerie dédié à l'automobile de prestige.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 6 .9-4.5 4.2 1 6.4L12 16.8 6.5 19.5l1-6.4L3 8.9l6-.9 3-6z"/></svg></div>
+          <h3>Sélection exigeante</h3>
+          <p>Chaque véhicule est choisi rigoureusement pour son historique, son entretien et son état impeccable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="social-strip">
+    <div class="section-inner">
+      <div>
+        <h2>Suivez nos réseaux</h2>
+        <p>Arrivages exclusifs et coulisses à découvrir chaque semaine.</p>
+      </div>
+      <div class="social-links">
+        <a href="https://www.instagram.com/r.m.s.p_motors/" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=61593989819940" target="_blank">Facebook</a>
+        <a href="https://www.tiktok.com/@rmsp.motors" target="_blank">TikTok</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="section-inner">
+      <div class="contact-card">
+        <div class="contact-info">
+          <h2>Contactez-nous</h2>
+          <p>Un projet d'achat, de vente ou une recherche personnalisée ? Nos conseillers sont à votre écoute.</p>
+          <div class="info-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6l9 7 9-7"/></svg>
+            <a href="mailto:rmsp.motors@gmail.com">rmsp.motors@gmail.com</a>
+          </div>
+          <div class="info-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>Sur rendez-vous uniquement</span>
+          </div>
+        </div>
+        <div class="contact-form-wrap">
+          <form id="contactForm" onsubmit="handleContactSubmit(event)">
+            <div class="f-row">
+              <label>Nom Complet</label>
+              <input type="text" id="cName" required>
+            </div>
+            <div class="f-row">
+              <label>Adresse E-mail</label>
+              <input type="email" id="cEmail" required>
+            </div>
+            <div class="f-row">
+              <label>Votre message</label>
+              <textarea id="cMsg" rows="4" placeholder="Précisez votre demande..." required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Envoyer le message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© <span id="year"></span> RMSP Motors — Tous droits réservés</div>
+      <div><a href="#" onclick="showAdminLogin(); return false;">Espace Administration</a></div>
+    </div>
+  </footer>
+</div>
+
+<!-- ================= MODAL DETAIL VEHICULE ================= -->
+<div class="modal-bg" id="carDetailModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeCarDetail()">×</button>
+    <div class="car-detail-gallery">
+      <div class="main-img-wrap" id="mainImgWrap">
+        <img id="detailMainImg" src="" alt="Véhicule">
+        <span class="zoom-hint">Cliquer pour agrandir</span>
+      </div>
+      <div class="thumb-gallery" id="detailThumbs"></div>
+    </div>
+    <h2 id="detailTitle" style="font-size:24px;"></h2>
+    <div id="detailPrice" style="font-size:22px; font-weight:700; color:var(--gold); margin: 8px 0;"></div>
+    <p id="detailDesc" style="color:var(--steel); font-size:14px; line-height:1.6;"></p>
+
+    <div class="detail-specs-grid">
+      <div><strong>Année :</strong> <span id="specYear"></span></div>
+      <div><strong>Kilométrage :</strong> <span id="specMileage"></span></div>
+      <div><strong>Boîte :</strong> <span id="specGearbox"></span></div>
+      <div><strong>Carburant :</strong> <span id="specFuel"></span></div>
+    </div>
+
+    <button class="submit-btn" onclick="closeCarDetail(); window.location.href='#contact';">Réserver / Demander des informations</button>
+  </div>
+</div>
+
+<!-- ================= LIGHTBOX PLEIN ECRAN ================= -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <button class="lightbox-nav lightbox-prev" onclick="lightboxNav(-1)">‹</button>
+  <img id="lightboxImg" src="" alt="Photo du véhicule en plein écran">
+  <button class="lightbox-nav lightbox-next" onclick="lightboxNav(1)">›</button>
+  <div class="lightbox-counter" id="lightboxCounter"></div>
+</div>
+
+<!-- ================= ADMIN / CLIENT LOGIN ================= -->
+<div id="loginView" style="display:none;">
+  <div class="login-box">
+    <h2>Espace Client / Admin</h2>
+    <p style="color:var(--steel); font-size:13.5px; margin-bottom:20px;">Accédez à votre espace sécurisé.</p>
+    <div id="loginError" style="color:#B03A2E; font-size:13px; margin-bottom:12px; display:none;">Code d'accès incorrect.</div>
+    <input type="password" id="loginPass" class="f-row" placeholder="Code d'accès" style="margin-bottom:14px;">
+    <button class="submit-btn" onclick="tryLogin()">Connexion</button>
+    <p style="margin-top:16px;"><a href="#" onclick="backToSite()" style="font-size:12.5px; color:var(--steel);">← Retour au site public</a></p>
+  </div>
+</div>
+
+<!-- ================= ADMIN DASHBOARD ================= -->
+<div id="adminView">
+  <div class="admin-bar">
+    <a href="#top" class="logo">
+      <img src="801394852_2400624680683157_8062290233063013296_n.png" alt="RMSP Motors Logo" class="logo-img">
+      <span class="logo-text">RMSP Motors</span>
+    </a>
+    <button class="btn-primary" style="padding:6px 14px; font-size:12px;" onclick="backToSite()">Quitter</button>
+  </div>
+
+  <div class="admin-wrap">
+    <!-- KPIs -->
+    <div class="admin-kpi">
+      <div class="kpi-card"><div>Total Stock</div><b id="kpiTotal">0</b></div>
+      <div class="kpi-card"><div>Disponibles</div><b id="kpiAvail" style="color:var(--ok);">0</b></div>
+      <div class="kpi-card"><div>Réservés / Vendus</div><b id="kpiSold" style="color:var(--hold);">0</b></div>
+      <div class="kpi-card"><div>Valeur du Stock</div><b id="kpiValue">0 €</b></div>
+    </div>
+
+    <div class="admin-section-head">
+      <h2>Gestion du Parc Automobile</h2>
+      <div class="admin-export-actions">
+        <button class="btn-outline-small" onclick="exportJSON()">Exporter JSON</button>
+        <button class="btn-outline-small" onclick="exportCSV()">Exporter CSV</button>
+        <button class="btn-primary" onclick="openForm()">+ Ajouter un véhicule</button>
+      </div>
+    </div>
+
+    <table class="admin-table">
+      <thead>
+        <tr><th>Véhicule</th><th>Prix</th><th>Année</th><th>Statut</th><th>Actions</th></tr>
+      </thead>
+      <tbody id="adminTableBody"></tbody>
+    </table>
+
+    <h2 style="margin-top:50px; margin-bottom:20px;">Messages Reçus (Leads)</h2>
+    <table class="admin-table">
+      <thead>
+        <tr><th>Nom</th><th>Email</th><th>Message</th><th>Reçu le</th><th>Actions</th></tr>
+      </thead>
+      <tbody id="adminMessagesBody"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ================= MODAL EDITION ANNONCE ================= -->
+<div class="modal-bg" id="modalBg">
+  <div class="modal">
+    <button class="modal-close" onclick="closeForm()">×</button>
+    <h3 id="modalTitle">Ajouter une annonce</h3>
+    <input type="hidden" id="fId">
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;" class="f-row">
+      <div><label>Marque</label><input id="fBrand" placeholder="Porsche"></div>
+      <div><label>Modèle</label><input id="fModel" placeholder="911 Carrera S"></div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;" class="f-row">
+      <div><label>Année</label><input id="fYear" type="number" placeholder="2022"></div>
+      <div><label>Prix (€)</label><input id="fPrice" type="number" placeholder="98000"></div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;" class="f-row">
+      <div><label>Kilométrage</label><input id="fMileage" placeholder="24 500 km"></div>
+      <div><label>Boîte</label>
+        <select id="fGearbox"><option>Automatique</option><option>Manuelle</option></select>
+      </div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;" class="f-row">
+      <div><label>Carburant</label>
+        <select id="fFuel"><option>Essence</option><option>Diesel</option><option>Hybride</option><option>Électrique</option></select>
+      </div>
+      <div><label>Statut</label>
+        <select id="fStatus"><option>Disponible</option><option>Réservé</option><option>Vendu</option></select>
+      </div>
+    </div>
+
+    <div class="f-row">
+      <label>Photos du véhicule</label>
+      <div class="dropzone" onclick="document.getElementById('fileInput').click()">
+        <input type="file" id="fileInput" accept="image/*" multiple style="display:none;" onchange="handleFileSelect(event)">
+        <p style="margin:0; font-weight:600; color:var(--yacht-light);">Cliquez ou glissez vos images ici</p>
+        <span style="font-size:12px; color:var(--steel);">La première image sera la photo de couverture.</span>
+      </div>
+      <div class="photo-thumbs" id="photoThumbs"></div>
+    </div>
+
+    <div class="f-row">
+      <label>Description & Options</label>
+      <textarea id="fDesc" rows="4" placeholder="Description détaillée du véhicule..."></textarea>
+    </div>
+
+    <div style="display:flex; justify-content:flex-end; gap:10px; margin-top:20px;">
+      <button class="btn-ghost" style="color:var(--navy-deep); border-color:var(--line);" onclick="closeForm()">Annuler</button>
+      <button class="btn-primary" onclick="saveListing()">Enregistrer l'annonce</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- ================= JAVASCRIPT LOGIC ================= -->
+<script>
+const DEFAULT_CARS = [
+  {
+    id: 1,
+    brand: "Porsche",
+    model: "911 GT3 (992)",
+    year: 2022,
+    price: 229000,
+    mileage: "12 400 km",
+    gearbox: "Automatique",
+    fuel: "Essence",
+    status: "Disponible",
+    photos: ["https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=800&q=80"],
+    desc: "Véhicule première main dans un état strictly neuf. Suivi exclusif en Centre Porsche. Modèle équipé du pack Clubsport, freins PCCB céramique et système d'échappement sport."
+  },
+  {
+    id: 2,
+    brand: "Ferrari",
+    model: "F8 Tributo",
+    year: 2021,
+    price: 285000,
+    mileage: "8 900 km",
+    gearbox: "Automatique",
+    fuel: "Essence",
+    status: "Disponible",
+    photos: ["https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80"],
+    desc: "Superbe F8 Tributo couleur Rosso Corsa. Entretien 7 ans Ferrari inclus. Nombreuses options carbone, sièges baquets Racing et réhausseur d'essieu avant (Lift)."
+  },
+  {
+    id: 3,
+    brand: "BMW",
+    model: "M4 CSL",
+    year: 2023,
+    price: 169000,
+    mileage: "3 100 km",
+    gearbox: "Automatique",
+    fuel: "Essence",
+    status: "Vendu",
+    photos: ["https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80"],
+    desc: "Édition limitée collector 1/1000 exemplaires dans le monde. État collector, jamais pratiqué sur circuit. Boite M Steptronic avec Drivelogic."
+  }
+];
+
+let cars = JSON.parse(localStorage.getItem('rmsp_cars')) || DEFAULT_CARS;
+let messages = JSON.parse(localStorage.getItem('rmsp_messages')) || [];
+let tempPhotos = [];
+let currentFilter = 'Tous';
+let priceBounds = { min: 0, max: 500000 };
+let currentDetailCarId = null;
+let currentDetailIndex = 0;
+let lightboxPhotos = [];
+let lightboxIndex = 0;
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+function init() {
+  saveData();
+  populateFilterOptions();
+  initPriceRange();
+  renderGrid();
+  renderAdminTable();
+  renderAdminMessages();
+  updateKPIs();
+  attachSwipe(document.getElementById('mainImgWrap'), () => detailNav(1), () => detailNav(-1));
+  attachSwipe(document.getElementById('lightboxImg'), () => lightboxNav(1), () => lightboxNav(-1));
+}
+
+function saveData() {
+  localStorage.setItem('rmsp_cars', JSON.stringify(cars));
+  localStorage.setItem('rmsp_messages', JSON.stringify(messages));
+}
+
+/* ---------- FILTRES AVANCES ---------- */
+function populateFilterOptions() {
+  const brandSel = document.getElementById('filterBrand');
+  const yearSel = document.getElementById('filterYear');
+  const currentBrand = brandSel.value;
+  const currentYear = yearSel.value;
+
+  const brands = [...new Set(cars.map(c => c.brand))].sort();
+  const years = [...new Set(cars.map(c => c.year))].sort((a, b) => b - a);
+
+  brandSel.innerHTML = '<option value="">Toutes les marques</option>' +
+    brands.map(b => `<option value="${b}">${b}</option>`).join('');
+  yearSel.innerHTML = '<option value="">Toutes les années</option>' +
+    years.map(y => `<option value="${y}">${y}</option>`).join('');
+
+  if (brands.includes(currentBrand)) brandSel.value = currentBrand;
+  if (years.includes(Number(currentYear))) yearSel.value = currentYear;
+}
+
+function initPriceRange() {
+  const prices = cars.map(c => Number(c.price));
+  priceBounds.min = prices.length ? Math.min(...prices) : 0;
+  priceBounds.max = prices.length ? Math.max(...prices) : 500000;
+  if (priceBounds.min === priceBounds.max) priceBounds.max += 1000;
+
+  const minEl = document.getElementById('priceMin');
+  const maxEl = document.getElementById('priceMax');
+  minEl.min = priceBounds.min; minEl.max = priceBounds.max; minEl.step = 1000; minEl.value = priceBounds.min;
+  maxEl.min = priceBounds.min; maxEl.max = priceBounds.max; maxEl.step = 1000; maxEl.value = priceBounds.max;
+  updatePriceRangeUI();
+}
+
+function onPriceRangeInput(which) {
+  const minEl = document.getElementById('priceMin');
+  const maxEl = document.getElementById('priceMax');
+  let minV = Number(minEl.value), maxV = Number(maxEl.value);
+  const step = Math.max(1000, Math.round((priceBounds.max - priceBounds.min) * 0.02));
+
+  if (which === 'min' && minV > maxV - step) minEl.value = Math.max(priceBounds.min, maxV - step);
+  if (which === 'max' && maxV < minV + step) maxEl.value = Math.min(priceBounds.max, minV + step);
+
+  updatePriceRangeUI();
+  renderGrid();
+}
+
+function updatePriceRangeUI() {
+  const minEl = document.getElementById('priceMin');
+  const maxEl = document.getElementById('priceMax');
+  const min = Number(minEl.value), max = Number(maxEl.value);
+  const span = (priceBounds.max - priceBounds.min) || 1;
+  const pctMin = ((min - priceBounds.min) / span) * 100;
+  const pctMax = ((max - priceBounds.min) / span) * 100;
+  document.getElementById('rangeFill').style.left = pctMin + '%';
+  document.getElementById('rangeFill').style.right = (100 - pctMax) + '%';
+  document.getElementById('priceRangeLabel').textContent = `${min.toLocaleString('fr-FR')} € - ${max.toLocaleString('fr-FR')} €`;
+}
+
+function resetFilters() {
+  currentFilter = 'Tous';
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('btn-Tous').classList.add('active');
+  document.getElementById('searchInput').value = '';
+  document.getElementById('filterBrand').value = '';
+  document.getElementById('filterYear').value = '';
+  document.getElementById('filterGearbox').value = '';
+  initPriceRange();
+  renderGrid();
+  showToast('Filtres réinitialisés.');
+}
+
+function renderGrid() {
+  const grid = document.getElementById('carGrid');
+  grid.innerHTML = '';
+
+  let searchVal = document.getElementById('searchInput').value.toLowerCase();
+  let brandVal = document.getElementById('filterBrand').value;
+  let yearVal = document.getElementById('filterYear').value;
+  let gearboxVal = document.getElementById('filterGearbox').value;
+  let minP = Number(document.getElementById('priceMin').value || priceBounds.min);
+  let maxP = Number(document.getElementById('priceMax').value || priceBounds.max);
+
+  let filtered = cars.filter(c => {
+    let matchFilter = (currentFilter === 'Tous' || c.status === currentFilter);
+    let matchSearch = (c.brand.toLowerCase().includes(searchVal) || c.model.toLowerCase().includes(searchVal));
+    let matchBrand = !brandVal || c.brand === brandVal;
+    let matchYear = !yearVal || String(c.year) === yearVal;
+    let matchGearbox = !gearboxVal || c.gearbox === gearboxVal;
+    let matchPrice = Number(c.price) >= minP && Number(c.price) <= maxP;
+    return matchFilter && matchSearch && matchBrand && matchYear && matchGearbox && matchPrice;
+  });
+
+  if (filtered.length === 0) {
+    grid.innerHTML = `<div style="grid-column:1/-1; text-align:center; padding:50px; color:var(--steel);">Aucun véhicule ne correspond à vos critères.</div>`;
+    return;
+  }
+
+  filtered.forEach(c => {
+    const card = document.createElement('div');
+    card.className = 'car-card';
+    card.onclick = () => openCarDetail(c.id);
+    card.innerHTML = `
+      <div class="car-media">
+        <img src="${c.photos[0] || 'https://via.placeholder.com/600x400'}" alt="${c.brand}">
+        <span class="car-badge badge-${c.status}">${c.status}</span>
+      </div>
+      <div class="car-body">
+        <h3>${c.brand} ${c.model}</h3>
+        <div class="car-sub">${c.year} — ${c.mileage}</div>
+        <div class="car-specs">
+          <span>${c.gearbox}</span>
+          <span>${c.fuel}</span>
+        </div>
+        <div class="car-price">
+          <b>${c.price.toLocaleString('fr-FR')} €</b>
+          <span class="car-cta">Voir détail →</span>
+        </div>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+function filterCars(status, btn) {
+  currentFilter = status;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  if (btn) {
+    btn.classList.add('active');
+  } else {
+    const targetBtn = document.getElementById(`btn-${status}`);
+    if (targetBtn) targetBtn.classList.add('active');
+  }
+  renderGrid();
+}
+
+function filterCarsNav(status) {
+  filterCars(status, document.getElementById(`btn-${status}`));
+}
+
+/* ---------- SWIPE TACTILE ---------- */
+function attachSwipe(el, onSwipeLeft, onSwipeRight) {
+  if (!el) return;
+  let startX = 0, startY = 0;
+  el.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+  }, { passive: true });
+  el.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - startX;
+    const dy = e.changedTouches[0].clientY - startY;
+    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) {
+      if (dx < 0) onSwipeLeft(); else onSwipeRight();
+    }
+  }, { passive: true });
+}
+
+/* ---------- DETAIL VEHICULE + GALERIE ---------- */
+function openCarDetail(id) {
+  const car = cars.find(c => c.id === id);
+  if (!car) return;
+
+  currentDetailCarId = id;
+  currentDetailIndex = 0;
+
+  document.getElementById('detailTitle').textContent = `${car.brand} ${car.model}`;
+  document.getElementById('detailPrice').textContent = `${car.price.toLocaleString('fr-FR')} €`;
+  document.getElementById('detailDesc').textContent = car.desc;
+  document.getElementById('specYear').textContent = car.year;
+  document.getElementById('specMileage').textContent = car.mileage;
+  document.getElementById('specGearbox').textContent = car.gearbox;
+  document.getElementById('specFuel').textContent = car.fuel;
+
+  const thumbsContainer = document.getElementById('detailThumbs');
+  thumbsContainer.innerHTML = '';
+
+  car.photos.forEach((p, idx) => {
+    const img = document.createElement('img');
+    img.src = p;
+    if (idx === 0) img.className = 'active';
+    img.onclick = (e) => {
+      e.stopPropagation();
+      currentDetailIndex = idx;
+      renderDetailImage();
+    };
+    thumbsContainer.appendChild(img);
+  });
+
+  document.getElementById('detailMainImg').onclick = () => openLightbox(currentDetailIndex);
+
+  renderDetailImage();
+  document.getElementById('carDetailModal').classList.add('open');
+}
+
+function renderDetailImage() {
+  const car = cars.find(c => c.id === currentDetailCarId);
+  if (!car) return;
+  document.getElementById('detailMainImg').src = car.photos[currentDetailIndex] || 'https://via.placeholder.com/600x400';
+  document.querySelectorAll('#detailThumbs img').forEach((t, i) => t.classList.toggle('active', i === currentDetailIndex));
+}
+
+function detailNav(dir) {
+  const car = cars.find(c => c.id === currentDetailCarId);
+  if (!car || car.photos.length < 2) return;
+  currentDetailIndex = (currentDetailIndex + dir + car.photos.length) % car.photos.length;
+  renderDetailImage();
+}
+
+function closeCarDetail() {
+  document.getElementById('carDetailModal').classList.remove('open');
+}
+
+/* ---------- LIGHTBOX PLEIN ECRAN ---------- */
+function openLightbox(idx) {
+  const car = cars.find(c => c.id === currentDetailCarId);
+  if (!car) return;
+  lightboxPhotos = car.photos;
+  lightboxIndex = idx;
+  updateLightboxImg();
+  document.getElementById('lightbox').classList.add('open');
+}
+
+function updateLightboxImg() {
+  document.getElementById('lightboxImg').src = lightboxPhotos[lightboxIndex];
+  document.getElementById('lightboxCounter').textContent = `${lightboxIndex + 1} / ${lightboxPhotos.length}`;
+}
+
+function lightboxNav(dir) {
+  if (!lightboxPhotos.length) return;
+  lightboxIndex = (lightboxIndex + dir + lightboxPhotos.length) % lightboxPhotos.length;
+  updateLightboxImg();
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+}
+
+document.addEventListener('keydown', e => {
+  if (document.getElementById('lightbox').classList.contains('open')) {
+    if (e.key === 'ArrowRight') lightboxNav(1);
+    if (e.key === 'ArrowLeft') lightboxNav(-1);
+    if (e.key === 'Escape') closeLightbox();
+  }
+});
+
+/* ---------- CONTACT / LEADS ---------- */
+function handleContactSubmit(e) {
+  e.preventDefault();
+  const name = document.getElementById('cName').value;
+  const email = document.getElementById('cEmail').value;
+  const msg = document.getElementById('cMsg').value;
+
+  messages.push({ id: Date.now(), name, email, msg, date: Date.now() });
+  saveData();
+  renderAdminMessages();
+
+  showToast('Votre message a bien été envoyé !');
+  document.getElementById('contactForm').reset();
+}
+
+function formatDateTime(d) {
+  if (!d) return '—';
+  const dateObj = isNaN(d) ? new Date(d) : new Date(Number(d));
+  if (isNaN(dateObj.getTime())) return String(d);
+  return dateObj.toLocaleString('fr-FR', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+}
+
+/* ---------- AUTH ADMIN ---------- */
+function showAdminLogin() {
+  document.getElementById('siteView').style.display = 'none';
+  document.getElementById('loginView').style.display = 'block';
+}
+
+function tryLogin() {
+  const pass = document.getElementById('loginPass').value;
+  if (pass === 'rmsp26' || pass === 'rmsp' || pass === 'admin') {
+    document.getElementById('loginView').style.display = 'none';
+    document.getElementById('adminView').style.display = 'block';
+  } else {
+    document.getElementById('loginError').style.display = 'block';
+  }
+}
+
+function backToSite() {
+  document.getElementById('loginView').style.display = 'none';
+  document.getElementById('adminView').style.display = 'none';
+  document.getElementById('siteView').style.display = 'block';
+}
+
+/* ---------- ADMIN : KPI, TABLE, MESSAGES ---------- */
+function updateKPIs() {
+  document.getElementById('kpiTotal').textContent = cars.length;
+  document.getElementById('kpiAvail').textContent = cars.filter(c => c.status === 'Disponible').length;
+  document.getElementById('kpiSold').textContent = cars.filter(c => c.status !== 'Disponible').length;
+
+  let totalVal = cars.reduce((acc, c) => acc + Number(c.price), 0);
+  document.getElementById('kpiValue').textContent = totalVal.toLocaleString('fr-FR') + ' €';
+}
+
+function renderAdminTable() {
+  const tbody = document.getElementById('adminTableBody');
+  tbody.innerHTML = '';
+
+  cars.forEach(c => {
+    const tr = document.createElement('tr');
+    let quickBtns = '';
+    if (c.status !== 'Réservé') quickBtns += `<button class="status-hold" onclick="quickStatus(${c.id}, 'Réservé')">Réservé</button>`;
+    if (c.status !== 'Vendu') quickBtns += `<button class="status-sold" onclick="quickStatus(${c.id}, 'Vendu')">Vendu</button>`;
+    if (c.status !== 'Disponible') quickBtns += `<button class="status-avail" onclick="quickStatus(${c.id}, 'Disponible')">Disponible</button>`;
+
+    tr.innerHTML = `
+      <td><b>${c.brand} ${c.model}</b></td>
+      <td>${c.price.toLocaleString('fr-FR')} €</td>
+      <td>${c.year}</td>
+      <td><span class="car-badge badge-${c.status}">${c.status}</span></td>
+      <td class="row-actions">
+        <button onclick="editListing(${c.id})">Éditer</button>
+        ${quickBtns}
+        <button class="danger" onclick="deleteListing(${c.id})">Supprimer</button>
+      </td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+function quickStatus(id, status) {
+  const c = cars.find(x => x.id === id);
+  if (!c) return;
+  c.status = status;
+  saveData();
+  renderAdminTable();
+  renderGrid();
+  updateKPIs();
+  showToast(`Statut mis à jour : ${status}`);
+}
+
+function renderAdminMessages() {
+  const tbody = document.getElementById('adminMessagesBody');
+  tbody.innerHTML = '';
+
+  if (messages.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="5" style="text-align:center; color:var(--steel);">Aucun message reçu pour le moment.</td></tr>`;
+    return;
+  }
+
+  [...messages].sort((a, b) => (b.date || 0) - (a.date || 0)).forEach(m => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td><b>${m.name}</b></td>
+      <td><a href="mailto:${m.email}">${m.email}</a></td>
+      <td>${m.msg}</td>
+      <td>${formatDateTime(m.date)}</td>
+      <td class="row-actions">
+        <button class="danger" onclick="deleteMessage(${m.id})">Effacer</button>
+      </td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+function deleteMessage(id) {
+  messages = messages.filter(m => m.id !== id);
+  saveData();
+  renderAdminMessages();
+  showToast('Message supprimé.');
+}
+
+/* ---------- EXPORT STOCK (JSON / CSV) ---------- */
+function downloadBlob(blob, filename) {
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+function exportJSON() {
+  const blob = new Blob([JSON.stringify(cars, null, 2)], { type: 'application/json' });
+  downloadBlob(blob, 'rmsp-stock.json');
+  showToast('Export JSON généré.');
+}
+
+function exportCSV() {
+  const headers = ['id', 'brand', 'model', 'year', 'price', 'mileage', 'gearbox', 'fuel', 'status', 'desc'];
+  const rows = cars.map(c => headers.map(h => {
+    let v = c[h] == null ? '' : String(c[h]);
+    v = v.replace(/"/g, '""');
+    return `"${v}"`;
+  }).join(','));
+  const csv = [headers.join(','), ...rows].join('\n');
+  const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8;' });
+  downloadBlob(blob, 'rmsp-stock.csv');
+  showToast('Export CSV généré.');
+}
+
+/* ---------- PHOTOS (dropzone) ---------- */
+function handleFileSelect(e) {
+  const files = e.target.files;
+  for (let file of files) {
+    const reader = new FileReader();
+    reader.onload = function (evt) {
+      tempPhotos.push(evt.target.result);
+      renderThumbs();
+    };
+    reader.readAsDataURL(file);
+  }
+}
+
+function renderThumbs() {
+  const thumbs = document.getElementById('photoThumbs');
+  thumbs.innerHTML = '';
+  tempPhotos.forEach((p, index) => {
+    const div = document.createElement('div');
+    div.className = 'photo-thumb';
+    div.innerHTML = `
+      <img src="${p}">
+      <button class="thumb-remove" onclick="removePhoto(${index})">×</button>
+    `;
+    thumbs.appendChild(div);
+  });
+}
+
+function removePhoto(idx) {
+  tempPhotos.splice(idx, 1);
+  renderThumbs();
+}
+
+/* ---------- CRUD ANNONCES ---------- */
+function openForm() {
+  document.getElementById('fId').value = '';
+  document.getElementById('fBrand').value = '';
+  document.getElementById('fModel').value = '';
+  document.getElementById('fYear').value = '';
+  document.getElementById('fPrice').value = '';
+  document.getElementById('fMileage').value = '';
+  document.getElementById('fDesc').value = '';
+  document.getElementById('modalTitle').textContent = 'Ajouter une annonce';
+  tempPhotos = [];
+  renderThumbs();
+  document.getElementById('modalBg').classList.add('open');
+}
+
+function editListing(id) {
+  const c = cars.find(item => item.id === id);
+  if (!c) return;
+
+  document.getElementById('fId').value = c.id;
+  document.getElementById('fBrand').value = c.brand;
+  document.getElementById('fModel').value = c.model;
+  document.getElementById('fYear').value = c.year;
+  document.getElementById('fPrice').value = c.price;
+  document.getElementById('fMileage').value = c.mileage;
+  document.getElementById('fGearbox').value = c.gearbox;
+  document.getElementById('fFuel').value = c.fuel;
+  document.getElementById('fStatus').value = c.status;
+  document.getElementById('fDesc').value = c.desc;
+
+  tempPhotos = [...c.photos];
+  renderThumbs();
+
+  document.getElementById('modalTitle').textContent = 'Modifier l\'annonce';
+  document.getElementById('modalBg').classList.add('open');
+}
+
+function closeForm() {
+  document.getElementById('modalBg').classList.remove('open');
+}
+
+function saveListing() {
+  const id = document.getElementById('fId').value;
+  const brand = document.getElementById('fBrand').value;
+  const model = document.getElementById('fModel').value;
+  const year = Number(document.getElementById('fYear').value);
+  const price = Number(document.getElementById('fPrice').value);
+  const mileage = document.getElementById('fMileage').value;
+  const gearbox = document.getElementById('fGearbox').value;
+  const fuel = document.getElementById('fFuel').value;
+  const status = document.getElementById('fStatus').value;
+  const desc = document.getElementById('fDesc').value;
+
+  if (!brand || !model || !price) {
+    alert('Veuillez remplir au moins la marque, le modèle et le prix.');
+    return;
+  }
+
+  const carData = {
+    id: id ? Number(id) : Date.now(),
+    brand, model, year, price, mileage, gearbox, fuel, status, desc,
+    photos: tempPhotos.length > 0 ? tempPhotos : ["https://via.placeholder.com/600x400"]
+  };
+
+  if (id) {
+    const idx = cars.findIndex(c => c.id === Number(id));
+    cars[idx] = carData;
+  } else {
+    cars.push(carData);
+  }
+
+  saveData();
+  populateFilterOptions();
+  initPriceRange();
+  renderGrid();
+  renderAdminTable();
+  updateKPIs();
+  closeForm();
+  showToast('Annonce enregistrée avec succès !');
+}
+
+function deleteListing(id) {
+  if (confirm('Voulez-vous vraiment supprimer cette annonce ?')) {
+    cars = cars.filter(c => c.id !== id);
+    saveData();
+    populateFilterOptions();
+    initPriceRange();
+    renderGrid();
+    renderAdminTable();
+    updateKPIs();
+    showToast('Annonce supprimée.');
+  }
+}
+
+/* ---------- UI HELPERS ---------- */
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.style.display = 'block';
+  setTimeout(() => { t.style.display = 'none'; }, 3000);
+}
+
+function toggleMobileNav() {
+  document.getElementById('mobileNav').classList.toggle('open');
+}
+
+// Initialisation au chargement
+window.onload = init;
+</script>
+</body>
+</html>
